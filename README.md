@@ -1,0 +1,3 @@
+# godot-scripted-event-system
+
+Work in progress...
