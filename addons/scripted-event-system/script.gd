@@ -18,7 +18,7 @@ func _process_me(delta: float) -> void:
 			current_element_index <= elements.size() - 1 
 			and elements[current_element_index] is SESActionEvent
 	):
-		elements[current_element_index]._process(delta)
+		elements[current_element_index].process(delta)
 		
 	if active and current_element_index > elements.size() - 1:
 		action_done()
@@ -43,7 +43,7 @@ func set_active(_active: bool) -> void:
 		elements[current_element_index].set_active(_active)
 		
 		
-func set_time_scale(_time_scale: float):
+func set_time_scale(_time_scale: float) -> void:
 	time_scale = _time_scale
 	
 	for element in elements:

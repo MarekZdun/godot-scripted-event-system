@@ -16,7 +16,7 @@ func _ready():
 
 func _process(delta):
 	for ae_key in action_events:  
-		action_events[ae_key]._process(delta)
+		action_events[ae_key].process(delta)
 
 
 func _input(event):
@@ -25,7 +25,7 @@ func _input(event):
 #			action_events[ae_key].set_active(!action_events[ae_key].active)
 
 			if action_events[ae_key].active:
-				action_events[ae_key].reset()
+				action_events[ae_key]._reset()
 			else:
 				action_events[ae_key].set_active(true)
 	elif event.is_action_pressed("ui_down"):

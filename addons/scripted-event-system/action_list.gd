@@ -8,7 +8,7 @@ var elements: Array = []
 func _process_me(delta: float) -> void:
 	for element in elements:
 		if active and element is SESActionEvent:
-			element._process(delta)
+			element.process(delta)
 		
 		
 func _reset() -> void:
@@ -36,7 +36,7 @@ func set_active(_active: bool) -> void:
 		action_done()
 		
 		
-func set_time_scale(_time_scale: float):
+func set_time_scale(_time_scale: float) -> void:
 	time_scale = _time_scale
 	
 	for element in elements:
